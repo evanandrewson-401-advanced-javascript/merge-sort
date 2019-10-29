@@ -1,8 +1,8 @@
 # InsertionSort
-Coding challenge #26
+Coding challenge #27
 
 ## Challenge
-The challenge is to create a function that will sort an array with the insertion sort method.
+The challenge is to create a function that will sort an array with the merge sort method.
 
 ## Approach & Efficiency 
-The solution uses nested loops so it's quadratic. It works by first iterating through the array and setting a temp variable equal to the array at each index (i) and setting a new index (j) equal to the current index minus 1. There's a another loop inside that loop while j is greater than or equal to 0 and while the value at i is less than the value at j. For each iteration of this while loop, it shifts the values in the array over to the right 1 and decrements j. After exiting the while loop, we finally set the value at j + 1 equal to the temp variable before the next iteration of the for loop.
+The solution uses multiple loops but none of them are nested so it's linear. It works by first splitting the array in half and recursively  sorting each half. It then uses a while loop to compare the entries of each half and reconstructs the original array based on which half has lesser values. If any values haven't been added after the while loop, the remaining values are added to the original array.
